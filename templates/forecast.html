@@ -1,0 +1,23 @@
+<!DOCTYPE html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Twig Weather App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/forecast.css') }}" >
+    </head>
+    <body>
+        <h1>Get the Weather Forecast!</h1>
+        <p><a href="/" ><button class=grey style="height:30px;width:200px">...or go to current weather!</button></a></p>
+        <br>
+        <p>Which forecast would you like to view?</p>
+        <form method="POST">
+            <p>
+                <input type="checkbox" name="forecast" value="limited">Limited</input>
+                <input type="checkbox" name="forecast" value="full">Full</input>
+            </p>
+        </form>
+        <h4>{{ result }}</h4>
+    <br><br>
+    <p>Modifications by @maijlma!</p>
+    </body>
+</html>

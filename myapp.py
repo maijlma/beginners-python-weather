@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from weather import get_weather
 
 app = Flask(__name__)
+city = None
 
 @app.route("/")
 def home():
@@ -20,9 +21,13 @@ def get_city():
 
     return render_template('home.html', result = weatherinfo)
 
-@app.route("/magda")
-def magda():
-    return "Hello...?"
+@app.route("/forecast")
+def forecast():
+    return render_template('forecast.html')
+
+@app.route("/forecast", methods=["POST"])
+def get_forecast():
+    return render_template("forecast.html", result = city)
 
 
 if __name__ == "__main__":

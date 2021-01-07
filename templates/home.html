@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" >
     </head>
     <body>
-        <h1>Get the Weather!</h1>
-        <p>Find the current weather.</p>
+        <h1>Get the Current Weather!</h1>
+        <p>To get the current weather, please enter your desired location:</p>
         <form method="POST">
             <p>
                 <input autocomplete="off" type="submit" />
@@ -15,5 +15,9 @@
             </p>
         </form>
         <h4>{{ result }}</h4>
+        <br>
+        <p><a href=forecast ><button class=grey style="height:30px;width:200px">...get the forecast here!</button></a></p>
     </body>
+    <br><br>
+    <p>Modifications by @maijlma!</p>
 </html>
